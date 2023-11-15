@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AboutMe</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <div></div>
+  <nav class="navigation-default" id="navigation">
+    <div>
+      <p>Patryk Pucułek</p>
+    </div>
+    <div>
+      <ul class="nav-links">
+        <li class="slide">
+          <a id="btnAboutMe">O mnie</a>
+        </li>
+        <li class="slide">
+          <a id="btnProjects">Portfolio</a>
+        </li>
+        <li class="slide">
+          <a id="btnContact">Kontakt</a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-icons-language">
+      <div class="nav-icons">
+        <a
+          href="https://www.linkedin.com/in/patryk-pucu%C5%82ek-646733158/"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+        <a href="https://github.com/Vukoss" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+      </div>
+    </div>
+  </nav>
+  <nav class="navigation-mobile" id="nav-mobile">
+    <div id="burger-menu" class="burger-menu">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <ul id="mobile-nav-links" class="mobile-nav-links nav-links-display">
+      <li>
+        <a id="btnAboutMe">O mnie</a>
+      </li>
+      <li>
+        <a id="btnProjects">Portfolio</a>
+      </li>
+      <li>
+        <a id="btnContact">Kontakt</a>
+      </li>
+    </ul>
+  </nav>
+  <body id="body">
+    <section id="aboutMe">
+      <div class="container main">
+        <div class="about-me">
+          <h1>Cześć, tu Patryk!</h1>
+          <div class="photography photography-first-mobile"></div>
+          <p>
+            Chemik z wykształcenia, programista z zamiłowania. Od ponad dwóch
+            lat samodzielnie uczę się programować. Piersze kroki stawiałem w
+            Javascripcie, jednak pokrętna droga zaprowadziła mnie do krainy
+            .NETu, w której zadomowiłem się i zamierzam pozostać na dłuzej!
+          </p>
+          <div class="all-skills">
+            <div class="skills">
+              <div class="tag">C#</div>
+              <div class="tag">.NET</div>
+              <div class="tag">ASP.NET</div>
+              <div class="tag">Blazor</div>
+              <div class="tag">Razor Pages</div>
+              <div class="tag">MVC</div>
+            </div>
+            <div class="skills">
+              <div class="tag">CSS</div>
+              <div class="tag">HTML</div>
+              <div class="tag">Javascript <span>/basic/</span></div>
+              <div class="tag">Bootstrap</div>
+              <div class="tag">GIT</div>
+            </div>
+            <div class="skills">
+              <div class="tag">Entity Framework Core</div>
+              <div class="tag">SQL</div>
+              <div class="tag">Postgresql</div>
+              <div class="tag">Dapper</div>
+            </div>
+          </div>
+          <button id="btnProjects" class="btn button-primary">
+            Zobacz moje portfolio<i class="fa-solid fa-arrow-down"></i>
+          </button>
+        </div>
+        <div class="photography photography-first"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects-background">
+      <div class="container projects">
+        <div class="photography photography-second"></div>
+        <div class="about-project">
+          <div>
+            <div class="portfolio-label">Portfolio</div>
+            <h1>Manager zleceń</h1>
+          </div>
+          <p>
+            Aplikacja utworzona z myślą o usprawnieniu pracy w laboratorium.
+            Dodawanie zleceń i podpinanie spraw nareszcie stało się proste!
+          </p>
+          <div class="project-buttons">
+            <button id="btnFunctions" class="btn button-primary">
+              Główne funkcjonalnosci<i class="fa-solid fa-arrow-down"></i>
+            </button>
+            <a
+              class="btn button-secondary"
+              href="https://github.com/Vukoss/CasesManagerApp"
+              target="_blank"
+              >Zobacz na github<i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="functions" class="container project-functions">
+        <h2>Główne funkcjonalności</h2>
+        <div class="functions">
+          <div class="function">
+            <h3>
+              <div>Tworzenie zleceń</div>
+              <div>i związanych z nimi spraw</div>
+            </h3>
+            <ul class="function-list">
+              <li>
+                <p>Edytowanie każdego zlecenia i sprawy.</p>
+              </li>
+              <li>
+                <p>Dodawanie komentarzy do zapisanych</p>
+                <p>spraw.</p>
+              </li>
+              <li>
+                <p>Ustawianie statusów spraw.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="function">
+            <h3>
+              <div>Rozrónienie konta Admina</div>
+              <div>od standardowych uytkowników</div>
+            </h3>
+            <ul class="function-list">
+              <li><p>Tylko Admin może usuwać zlecenia.</p></li>
+              <li>
+                <p>Tylko Admin może dodawać nowych</p>
+                <p>użytkowników i przypisywać im role.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="function">
+            <h3>
+              <div>Własny Dashboard, ale też</div>
+              <div>dostęp do wszystkich zleceń</div>
+            </h3>
+            <ul class="function-list">
+              <li>
+                <p>Na wejście widok na sprawy przypisane</p>
+                <p>do aktywnego użytkownika.</p>
+              </li>
+              <li>
+                <p>Na wejście podsumowanie wszystkich</p>
+                <p>zleceń na podstawie ich statusów.</p>
+              </li>
+              <li>
+                <p>Filtrowanie na widoku wszystkich zleceń.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <a
+          class="btn button-primary"
+          href="https://github.com/Vukoss/CasesManagerApp"
+          target="_blank"
+        >
+          Zobacz na github<i class="fa-brands fa-github"></i>
+        </a>
+        <button id="btnContact" class="button-contact">
+          Kontakt<i class="fa-solid fa-arrow-down"></i>
+        </button>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container contact">
+        <div>
+          <h1>Kontakt</h1>
+          <p>
+            Sredecznie zapraszam do kontaku! Obecnie szukam pracy na stanowisku
+            junior fullstack developer/backend developer.
+          </p>
+          <div class="contact-items">
+            <div class="contact-me">
+              <div class="tag">
+                <i class="fa-solid fa-user"></i>Patryk Pucułek
+              </div>
+              <div class="tag">
+                <i class="fa-solid fa-location-dot"></i>Warszawa
+              </div>
+            </div>
+            <div class="contact-me">
+              <div class="tag">
+                <i class="fa-solid fa-phone"></i>530 - 552 - 833
+              </div>
+              <div class="tag">
+                <i class="fa-solid fa-envelope"></i>patryk.puculek@gmail.com
+              </div>
+            </div>
+          </div>
+          <div class="contact-buttons">
+            <a href="#" download="CV" class="btn button-secondary">CV</a>
+            <a
+              class="btn button-secondary"
+              href="https://www.linkedin.com/in/patryk-pucu%C5%82ek-646733158/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://github.com/Vukoss"
+              target="_blank"
+              class="btn button-secondary"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+        </div>
+        <div class="photography photography-third"></div>
+      </div>
+    </section>
+    <footer>
+      <p>&copy2023 Patryk Pucułek</p>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/1e942bcbe6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js" type="text/javascript"></script>
+  </body>
+</html>

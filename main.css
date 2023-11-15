@@ -1,0 +1,580 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --green-primary: #205045;
+  --green-secondary: #2d5a4f;
+  --green-tertiary: #96aca7;
+  --orange-primary: #ff6f1e;
+  --orange-secondary: #ffece1;
+  --orange-tertiary: #ff620a;
+  --black-primary: #2b2b2b;
+  --white-primary: #f8f8f8;
+}
+
+h1 {
+  font-size: 5.2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+body {
+  font-family: "Prompt", sans-serif;
+  letter-spacing: 0.08rem;
+  background-color: var(--white-primary);
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--black-primary);
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+.navigation-default {
+  display: flex;
+  position: sticky;
+  top: 0;
+  font-size: 1.6rem;
+  font-weight: 400;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 0 5.9rem;
+  height: 7.2rem;
+  transition: all 0.5s;
+  z-index: 1000;
+}
+
+.navigation-mobile {
+  display: none;
+}
+
+.nav-on-scroll {
+  background-color: var(--white-primary);
+  border-bottom: 0.5px solid var(--black-primary);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 6rem;
+}
+
+.slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide::after {
+  position: absolute;
+  bottom: 0;
+  left: -104%;
+  content: "";
+  width: 100%;
+  border: 1px black solid;
+  transition: all 0.5s;
+}
+
+.slide:hover::after {
+  left: 0;
+}
+
+.nav-icons-language {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 2rem;
+  font-size: 2rem;
+}
+
+.container {
+  max-width: 144rem;
+  margin: auto;
+}
+
+.main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15rem 6rem;
+  gap: 3rem;
+}
+
+.main button {
+  margin-top: 3rem;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 55rem;
+  text-align: justify;
+}
+
+.photography {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.photography-first {
+  width: 45rem;
+  height: 37rem;
+  background-image: url(img/image_50376705.JPG);
+  position: relative;
+  box-shadow: 6px 6px 0px 0px #2b2b2b;
+}
+.photography-first-mobile {
+  display: none;
+  width: 45rem;
+  height: 37rem;
+  background-image: url(img/image_50376705.JPG);
+  position: relative;
+  box-shadow: 6px 6px 0px 0px #2b2b2b;
+}
+
+.photography-first::after {
+  position: absolute;
+  background-color: var(--white-primary);
+  top: -30px;
+  right: 25px;
+  width: 172px;
+  height: 194px;
+  border: solid 1.5px black;
+  content: "";
+  transform: rotate(-4.664deg);
+  z-index: -100;
+}
+
+.photography-first::before {
+  position: absolute;
+  top: -30px;
+  right: -20px;
+  width: 172px;
+  height: 194px;
+  border: solid 1.5px black;
+  content: "";
+  transform: rotate(8.742deg);
+  z-index: -100;
+}
+
+.photography-second {
+  width: 45rem;
+  height: 37rem;
+  background-image: url(img/Wizka\ appka.jpg);
+}
+
+.photography-third {
+  width: 45rem;
+  height: 37rem;
+  background-image: url(img/grafika\ kontakt.svg);
+}
+
+.skills {
+  display: flex;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.tag {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 0.8rem 1.6rem;
+  background-color: var(--orange-secondary);
+  color: var(--orange-primary);
+  flex-grow: 1;
+  text-align: center;
+}
+
+.tag i {
+  margin-right: 1.5rem;
+}
+
+.btn {
+  width: fit-content;
+  font-weight: 500;
+  padding: 8px 16px;
+  box-shadow: 6px 6px 0px 0px #2b2b2b;
+  font-family: "Prompt", sans-serif;
+  cursor: pointer;
+  letter-spacing: 0.08rem;
+  font-size: 1.4rem;
+}
+
+.button-primary {
+  background-color: var(--orange-primary);
+  color: var(--white-primary);
+  transition: all 0.2s;
+}
+
+.button-primary:hover {
+  background-color: var(--orange-tertiary);
+  box-shadow: 4px 4px 0px 0px #2b2b2b;
+}
+
+.button-secondary {
+  background-color: var(--white-primary);
+  color: var(--orange-primary);
+  border: 1px solid black;
+  transition: all 0.2s;
+}
+
+.button-secondary:hover {
+  background-color: var(--orange-secondary);
+  box-shadow: 4px 4px 0px 0px #2b2b2b;
+}
+
+.button-primary i,
+.button-secondary i {
+  margin-left: 1rem;
+}
+
+.contact .button-secondary i {
+  margin-left: 0;
+}
+
+.projects-background {
+  background-color: var(--green-primary);
+}
+
+.projects {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15rem 6rem;
+}
+
+.about-project {
+  flex-basis: 55rem;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--white-primary);
+}
+
+.portfolio-label {
+  width: fit-content;
+  font-size: 1.4rem;
+  margin: 0 1rem 0 0;
+  font-weight: 700;
+  padding: 4px 8px;
+  background-color: var(--green-tertiary);
+  color: var(--white-primary);
+}
+
+.project-buttons,
+.contact-buttons {
+  display: flex;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.project-functions {
+  display: flex;
+  color: var(--white-primary);
+  align-items: center;
+  flex-direction: column;
+}
+
+.project-functions h2 {
+  margin-bottom: 4.4rem;
+}
+
+.project-functions .button-primary {
+  margin-top: 4.4rem;
+  margin-bottom: 3.2rem;
+}
+
+.functions {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.button-contact {
+  color: var(--white-primary);
+  background-color: transparent;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.button-contact i {
+  margin-left: 1rem;
+  margin-bottom: 10rem;
+}
+
+.function {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  background-color: var(--green-secondary);
+}
+
+.function h3 {
+  text-align: center;
+  margin-bottom: 2.4rem;
+  width: 36rem;
+}
+
+.function-list {
+  width: 36rem;
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+
+.function-list li {
+  margin-left: 3rem;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15rem 6rem;
+}
+.contact-items {
+  margin-top: 3rem;
+}
+
+.contact-items,
+.contact p,
+.contact h1 {
+  width: 50rem;
+}
+.contact-me {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  color: var(--white-primary);
+  background-color: var(--green-primary);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+@media (max-width: 600px) {
+  .about-me {
+    max-width: 28rem;
+  }
+  .about-me p {
+    margin: 2rem 0;
+  }
+  .skills {
+    flex-wrap: wrap;
+  }
+  .photography-first {
+    display: none;
+  }
+  .photography-first-mobile {
+    display: block;
+    max-width: 25rem;
+    margin-top: 8rem;
+    margin: 3rem auto;
+  }
+
+  /* SKECJA PROEJKTU */
+  .about-project {
+    max-width: 28rem;
+  }
+  .photography-second {
+    max-width: 25rem;
+    margin-top: 8rem;
+    margin: 3rem auto;
+  }
+  .project-buttons {
+    flex-direction: column;
+  }
+  .project-buttons button,
+  .project-buttons a {
+    width: 28rem;
+  }
+  /* SEKCJA FUNKCJI PROJEKTU */
+  .function h3,
+  .function-list {
+    max-width: 29rem;
+  }
+  .function-list {
+    text-align: justify;
+  }
+  .function-list li {
+    margin-left: 0;
+  }
+  /* KONTAKT */
+  .contact-items,
+  .contact p,
+  .contact h1 {
+    width: 38rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation-default {
+    display: none;
+    position: relative;
+  }
+
+  .navigation-mobile {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    height: 7.2rem;
+    border-bottom: solid 1px black;
+    transition: height 0.5s;
+    background-color: var(--white-primary);
+    z-index: 100000;
+    overflow: hidden;
+  }
+
+  .mobile-change-height {
+    height: 100vh;
+  }
+
+  .mobile-change-scroll {
+    overflow-y: hidden;
+  }
+
+  .burger-menu {
+    font-size: 3rem;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    right: 1rem;
+  }
+
+  .nav-links-display {
+    display: none;
+  }
+
+  .mobile-nav-links {
+    font-size: 3rem;
+    list-style: none;
+  }
+
+  .mobile-nav-links li {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .contact-me .tag {
+    width: 30rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main {
+    flex-direction: column;
+    justify-content: start;
+    padding: 10rem 6rem;
+  }
+  .about-me {
+    width: 55rem;
+    flex-basis: 50rem;
+  }
+  .about-me h1 {
+    text-align: center;
+  }
+  .about-me button {
+    margin: 3rem auto 0;
+  }
+
+  /* SEKCJA PROJEKTU */
+  .projects {
+    flex-direction: column;
+    align-items: center;
+    padding: 10rem 6rem;
+  }
+  .about-project {
+    align-items: center;
+    justify-content: start;
+    width: 55rem;
+    flex-basis: 40rem;
+    order: 0;
+    text-align: center;
+  }
+  .about-project p {
+    text-align: justify;
+  }
+  .photography-second {
+    order: 1;
+  }
+  .portfolio-label {
+    margin: 0 auto;
+  }
+
+  .project-buttons {
+    /* flex-direction: column; */
+    align-items: center;
+  }
+
+  /* SKECJA FUNKCJI PROJEKTU */
+  .project-functions h2 {
+    text-align: center;
+  }
+
+  .functions {
+    flex-direction: column;
+  }
+  /* KONTAKT */
+  .contact {
+    text-align: center;
+    align-items: center;
+    max-width: 55rem;
+    flex-direction: column;
+    padding: 10rem 6rem;
+  }
+  .contact p {
+    text-align: justify;
+  }
+  .contact-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contact-buttons {
+    justify-content: center;
+  }
+  .contact-items {
+    margin-top: 3rem;
+  }
+  .photography-third {
+    display: none;
+  }
+}
