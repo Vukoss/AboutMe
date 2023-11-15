@@ -14,7 +14,7 @@ const aboutMeSection = document.getElementById("aboutMe");
 const functionsSection = document.querySelector("#functions");
 
 const navigationChange = () => {
-  body.classList.toggle("mobile-change-scroll");
+  body.classList.remove("mobile-change-scroll");
   navMobile.classList.remove("mobile-change-height");
   mobileNavLinks.classList.add("nav-links-display");
 };
